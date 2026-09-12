@@ -33,3 +33,12 @@
 - **Output space is usually not counted**, unless asked.
 - Extra memory that grows with input size **is counted**.
 
+### Recursion 
+
+- **Recursion** → Function calls itself.
+- **Base Case** → Stops recursion.
+- **Recursive Case** → Calls itself with changed input.
+- **Pattern:** Big problem → Smaller problem → Base case → Combine.
+
+
+
