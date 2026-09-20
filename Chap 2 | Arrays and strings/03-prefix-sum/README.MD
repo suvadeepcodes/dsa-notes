@@ -15,7 +15,9 @@
 
   -  `prefix[j] - prefix[i] + nums[i]` 
   - `prefix[j] - prefix[i-1]`
-  - We have to use both formulaes so remember both
+  -  Time and Space Complexity of calculating sum of subarray from i to j (inclusive)
+     -  Time : O(1)
+     -  Space : O(1) 
 
 - Building a prefix sum ➡️
 
