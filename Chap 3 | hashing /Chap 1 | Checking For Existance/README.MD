@@ -111,3 +111,56 @@ let findNumbers = nums => {
 
 Question can be found [here](https://leetcode.com/problems/check-if-the-sentence-is-pangram/description/)
 
+**Solution**:
+
+```js
+var checkIfPangram = function(sentence) {
+    let mySet = new Set(sentence);
+    return mySet.size === 26 ? true : false
+};
+```
+
+---
+
+268. Missing Number
+
+Question can be found [here](https://leetcode.com/problems/missing-number/description/)
+
+**Solution**:
+
+```js
+var missingNumber = function(nums) {
+    const numSet = new Set(nums);
+    const n = nums.length;
+
+    for (let number = 0; number <= n; number++) {
+        if (!numSet.has(number)) {
+            return number;
+        }
+    }
+};
+```
+
+---
+
+1426. Counting Elements 
+
+Question can be found [here](https://leetcode.com/problems/counting-elements/description/)
+
+**Solution**:
+
+```js
+var countElements = function(arr) {
+    const set = new Set(arr);
+    let count = 0;
+
+    for (const num of arr) {
+        if (set.has(num + 1)) {
+            count++;
+        }
+    }
+
+    return count;
+};
+```
+
