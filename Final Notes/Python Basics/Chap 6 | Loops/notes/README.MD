@@ -2,7 +2,7 @@
 
 ## while loops
 
-```
+```python
 i=0
 while i<5:
   print("I love Python!")
@@ -13,21 +13,21 @@ while i<5:
 
 - print 0-9
 
-  ```
+  ```python
   for i in range(10):
     print(i)
   ```
 
 - print 2-4
 
-  ```
+  ```python
   for i in range(2,5):
     print(i)
   ```
 
 - print 0,2,4,6 and 8
 
-  ```
+  ```python
   for i in range(0,10,2):
     print(i)
   ```

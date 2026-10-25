@@ -19,7 +19,7 @@
 
 - if statements do not create a new scope .This means that varibles defined inside an if statement are accessible outside of the if statement
 
-  ```
+  ```python
   if True:
     message ="Hello"
   print(message) # This will print "Hello"
