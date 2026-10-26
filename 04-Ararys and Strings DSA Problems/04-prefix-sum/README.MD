@@ -21,14 +21,13 @@
 
 - Building a prefix sum ➡️
 
-  ```js
-  // Given an array nums 
-  let prefix = [nums[0]]
-  for(let i =1 ;i<nums.length ; i++){
-  	prefix.push(nums[i] + prefix[i-1])
-  }
+  ```python
+  prefix = [nums[0]]
+  
+  for i in range(1, len(nums)):
+      prefix.append(nums[i] + prefix[i - 1])
   ```
-
+  
   - Time and Space Complexity of building a prefix sum 
     - Time : O(n)
     - Space : O(n)
@@ -43,37 +42,33 @@ Given an integer array `nums`, an array `queries` where `queries[i] = [x, y]` an
 
 For example, given `nums = [1, 6, 3, 2, 7, 2]`, `queries = [[0, 3], [2, 5], [2, 4]]`, and `limit = 13`, the answer is `[true, false, true]`. For each query, the subarray sums are `[12, 14, 12]`.
 
-```js 
-var answerQueries = function(nums, queries, limit) {
-};
+```python
+def answerQueries(nums, queries, limit):
 ```
 
 **Solution**:
 
 ```js
-var answerQueries = function(nums, queries, limit) {
-  let prefix = [nums[0]];
+def answerQueries(nums, queries, limit):
+    prefix = [nums[0]]
 
-  for(let i=1;i<nums.length;i++){
-    prefix.push(nums[i]+ prefix[i-1])
-  }
+    for i in range(1, len(nums)):
+        prefix.append(nums[i] + prefix[i - 1])
 
-  let ans = []
-  for( const [x,y] of queries){
-    let curr = prefix[y] - prefix[x] + nums[x];
-    ans.push(curr<limit)
-  }
-  return ans
-  
-};
+    ans = []
+
+    for x, y in queries:
+        curr = prefix[y] - prefix[x] + nums[x]
+        ans.append(curr < limit)
+
+    return ans
 
 
 nums2 = [1, 6, 3, 2, 7, 2]
-queries2 = [[0, 3], [2, 5], [2, 4]] 
+queries2 = [[0, 3], [2, 5], [2, 4]]
 limit2 = 13
-// answer ➡️ [true, false, true]
 
-console.log(answerQueries(nums2,queries2,limit2))
+print(answerQueries(nums2, queries2, limit2))
 ```
 
 **Complexity** ➡️ 
@@ -94,21 +89,22 @@ Question can be found [here](https://leetcode.com/problems/number-of-ways-to-spl
 **Solution**:
 
 ```js
-var waysToSplitArray = function(nums) {
-    let prefix = [nums[0]];
-    for(let i=1;i<nums.length;i++){
-        prefix.push(nums[i] + prefix[i-1])
-    }
+def waysToSplitArray(nums):
+    prefix = [nums[0]]
 
-    let ans = 0;
-    for(let i=0;i<nums.length - 1;i++){
-        let left = prefix[i];
-        let right = prefix[nums.length-1] - prefix[i]
+    for i in range(1, len(nums)):
+        prefix.append(nums[i] + prefix[i - 1])
 
-        if(left>=right)ans++ 
-    }
-    return ans;
-};
+    ans = 0
+
+    for i in range(len(nums) - 1):
+        left = prefix[i]
+        right = prefix[len(nums) - 1] - prefix[i]
+
+        if left >= right:
+            ans += 1
+
+    return ans
 ```
 
 **Note: Valid Split Range**
@@ -116,7 +112,7 @@ var waysToSplitArray = function(nums) {
 When splitting an array into **two non-empty subarrays**, the split can only happen between index `0` and `n - 2`.
 
 ```js
-for (let i = 0; i < nums.length - 1; i++)
+for i in range(len(nums) - 1):
 ```
 
 Do **not** check `i = nums.length - 1`, because that would make the right subarray empty.
@@ -137,15 +133,13 @@ Question can be found [here](https://leetcode.com/problems/running-sum-of-1d-arr
 **Solution**:
 
 ```js
-var runningSum = function(nums) {
-    let prefix = [nums[0]];
+def runningSum(nums):
+    prefix = [nums[0]]
 
-    for(let i=1;i<nums.length;i++){
-        prefix.push(nums[i] + prefix[i-1])
-    }
+    for i in range(1, len(nums)):
+        prefix.append(nums[i] + prefix[i - 1])
 
     return prefix
-};
 ```
 
 ### Time & Space Complexity
@@ -161,16 +155,16 @@ Question can be found [here](https://leetcode.com/problems/minimum-value-to-get-
 
 **Solution**:
 
-```js
-var minStartValue = function(nums) {
-    let minVal = 0;
-    let total = 0;
-    for(let i=0;i<nums.length;i++){
-        total += nums[i];
-        minVal = Math.min(minVal, total)
-    }
-    return 1-minVal
-};
+```python
+def minStartValue(nums):
+    minVal = 0
+    total = 0
+
+    for i in range(len(nums)):
+        total += nums[i]
+        minVal = min(minVal, total)
+
+    return 1 - minVal
 ```
 
 Note ➡️
@@ -191,39 +185,35 @@ Question can be found [here](https://leetcode.com/problems/k-radius-subarray-ave
 **Solution**:
 
 ```js
-var getAverages = function(nums, k) {
-    // When a single element is considered then its average will be the number itself only.
-    if (k === 0) {
-        return nums;
-    }
-    
-    const windowSize = 2 * k + 1
-    const n = nums.length;
-    const averages = new Array(n).fill(-1);
+def getAverages(nums, k):
+    # If k = 0, each element is its own average
+    if k == 0:
+        return nums
 
-    // Any index will not have 'k' elements in its left and right.
-    if (windowSize > n) {
-        return averages;
-    }
+    windowSize = 2 * k + 1
+    n = len(nums)
+    averages = [-1] * n
 
-    
-    prefix =[nums[0]];
-    for(let i=1;i<nums.length;i++){
-        prefix.push(nums[i]+prefix[prefix.length-1])
-    }
-    
-    // We iterate only on those indices which have at least 'k' elements in their left and right.
-    // i.e. indices from 'k' to 'n - k'
-    for (let i = k; i < (n - k); i++) {
-        const leftBound = i - k;
-        const rightBound = i + k;
-        const subArraySum = prefix[rightBound ] - prefix[leftBound] + nums[leftBound];
-        const average = Math.floor(subArraySum / windowSize);
-        averages[i] = average;
-    }
+    # If the window is larger than the array
+    if windowSize > n:
+        return averages
 
-    return averages;
-};
+    prefix = [nums[0]]
+
+    for i in range(1, len(nums)):
+        prefix.append(nums[i] + prefix[-1])
+
+    # Calculate averages for valid indices
+    for i in range(k, n - k):
+        leftBound = i - k
+        rightBound = i + k
+
+        subArraySum = prefix[rightBound] - prefix[leftBound] + nums[leftBound]
+        average = subArraySum // windowSize
+
+        averages[i] = average
+
+    return averages
 ```
 
 ### Time & Space Complexity
@@ -242,15 +232,13 @@ Question can be found [here](https://leetcode.com/problems/find-the-highest-alti
 **Solution**:
 
 ```js
-var largestAltitude = function(gain) {
-    let prefix = [0];
+def largestAltitude(gain):
+    prefix = [0]
 
-    for(let i = 0; i < gain.length; i++){
-    prefix.push(gain[i] + prefix[i]);
-}
+    for i in range(len(gain)):
+        prefix.append(gain[i] + prefix[i])
 
-    return Math.max(...prefix);
-};
+    return max(prefix)
 ```
 
 ### Time & Space Complexity
@@ -267,21 +255,20 @@ Question can be found [here](https://leetcode.com/problems/find-pivot-index/desc
 **Solution**:
 
 ```js
-var pivotIndex = function(nums) {
-    let prefix = [nums[0]];
+def pivotIndex(nums):
+    prefix = [nums[0]]
 
-    for(let i=1;i<nums.length;i++){
-        prefix.push(nums[i] + prefix[i-1])
-    }
+    for i in range(1, len(nums)):
+        prefix.append(nums[i] + prefix[i - 1])
 
-    for(let i=0;i<nums.length;i++){
-        let left = i ===0 ? 0 : prefix[i-1];
-        let right = prefix[nums.length-1] - prefix[i];
+    for i in range(len(nums)):
+        left = 0 if i == 0 else prefix[i - 1]
+        right = prefix[len(nums) - 1] - prefix[i]
 
-        if(left === right) return i
-     }
-     return -1
-};
+        if left == right:
+            return i
+
+    return -1
 ```
 
 ### Time & Space Complexity
@@ -298,18 +285,18 @@ Question can be found [here](https://leetcode.com/problems/range-sum-query-immut
 **Solution**:
 
 ```js
-var NumArray = function(nums) {
-    this.prefix = [nums[0]];
-    for (let i = 1; i < nums.length; i++) {
-        this.prefix.push(this.prefix[i - 1] + nums[i]);
-    }
-};
+class NumArray:
+    def __init__(self, nums):
+        self.prefix = [nums[0]]
 
-NumArray.prototype.sumRange = function(left, right) {
+        for i in range(1, len(nums)):
+            self.prefix.append(self.prefix[i - 1] + nums[i])
 
-    if(left === 0) return this.prefix[right]
-    return this.prefix[right] - this.prefix[left-1];
-};
+    def sumRange(self, left, right):
+        if left == 0:
+            return self.prefix[right]
+
+        return self.prefix[right] - self.prefix[left - 1]
 ```
 
 ### Time & Space Complexity
