@@ -20,9 +20,11 @@
 
 ## Python Lists and Strings
 
-| Topic              | Status | Link |
-| ------------------ | ------ | ---- |
-| Chap 1 \| Strings  | Done   |      |
-| Chap 2 \| Lists    | Done   |      |
-| Chap 3 \| 2D Lists | Done   |      |
+| Topic                   | Status | Link |
+| ----------------------- | ------ | ---- |
+| Chap 1 \| Strings       | Done   |      |
+| Chap 2 \| Lists         | Done   |      |
+| Chap 3 \| 2D Lists      | Done   |      |
+| Chap 4 \| Sorting       | Done   |      |
+| Chap 5 \| Pythonic Code | Done   |      |
 
