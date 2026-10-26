@@ -1,5 +1,7 @@
 # Anki Notes ➡️ Chap 5 | Conditional Statements
 
+Anki ➡️ 05-conditional-statements
+
 **Q**: Explain the following conditional statements 
 
 - `==`
@@ -22,7 +24,13 @@ Comparision operators evaluate to `True` or `False` depending on the values we c
 | `<=`                 | Less than or Equal to    |
 | `>=`                 | Greater than or Equal to |
 
-**Q**: What is the scope of if statement ? 
+**Q**: Is the code correct ? 
+
+```python
+if True:
+  message ="Hello"
+print(message) # This will print "Hello"
+```
 
 **Solution**:
 
