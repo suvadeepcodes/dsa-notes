@@ -11,3 +11,10 @@
 | Chap 5 \| Conditional Statements | Done   |      |
 | Chap 6 \| Loops                  | Done   |      |
 
+## Introduction to Big O and Recursion
+
+| Topic                               | Status | Link |
+| ----------------------------------- | ------ | ---- |
+| Chap 1 \| Introduction to Big O     | Done   |      |
+| Chap 2 \| Introduction to Recursion | Done   |      |
+

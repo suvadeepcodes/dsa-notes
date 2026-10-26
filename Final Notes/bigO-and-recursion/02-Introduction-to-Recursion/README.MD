@@ -17,17 +17,15 @@
 
 ### Example
 
-```javascript
-function fn(i) {
-    if (i > 10) {
-        return; // Base Case
-    }
+```python
+def fn(i):
+    if i > 10:
+        return  # Base case
 
-    console.log(i);
-    fn(i + 1); // Recursive Case
-}
+    print(i)
+    fn(i + 1)  # Recursive case
 
-fn(1);
+fn(1)
 ```
 
 ### Base Case
@@ -35,10 +33,9 @@ fn(1);
 - The **base case** determines when the recursion should stop.
 - Without a base case, the function will keep calling itself indefinitely.
 
-```javascript
-if (i > 10) {
-    return;
-}
+```python
+if i > 10:
+    return
 ```
 
 ### Recursive Case
@@ -61,18 +58,16 @@ fn(i + 1);
 ### Example
 
 ```js
-function fn(i) {
-    if (i > 3) {
-        return;
-    }
+def fn(i):
+    if i > 3:
+        return
 
-    console.log(i);
-    fn(i + 1);
-    console.log("End of call where i =", i);
-    return;
-}
+    print(i)
+    fn(i + 1)
+    print("End of call where i =", i)
+    return
 
-fn(1);
+fn(1)
 ```
 
 ### Output
@@ -144,18 +139,16 @@ fn(1) continues → print "End of call where i = 1"
 - Recursive Function: 
 
   ```js
-  function F(n) {
-      if (n <= 1) {
-          return n;
-      }
+  def F(n):
+      if n <= 1:
+          return n
   
-      let oneBack = F(n - 1);
-      let twoBack = F(n - 2);
+      one_back = F(n - 1)
+      two_back = F(n - 2)
   
-      return oneBack + twoBack;
-  }
+      return one_back + two_back
   ```
-
+  
 - Breaking the Problem Down
 
 - To calculate `F(3)`:

@@ -171,14 +171,12 @@ Note ➡️
 
 ### Case 1: Single Loop — `O(n)`
 
-```js
-Given an integer array arr with length n
-for (let i = 0; i < arr.length; i++) {
-    console.log(arr[i]);
-}
+```python
+for i in range(len(arr)):
+    print(arr[i])
 ```
 
-- `console.log(arr[i])` → **`O(1)`**
+- `print(arr[i])` → **`O(1)`**
 
 - The loop runs **`n` times**.
 
@@ -192,16 +190,13 @@ for (let i = 0; i < arr.length; i++) {
 
 ### Case 2: Nested Loop with Constant Inner Loop — `O(n)`
 
-```
-Given an integer array arr with length n:
-for (let i = 0; i < arr.length; i++) {
-    for (let j = 0; j < 500000; j++) {
-        console.log(arr[i]);
-    }
-}
+```python
+for i in range(len(arr)):
+    for j in range(500000):
+        print(arr[i])
 ```
 
-- `console.log(arr[i])` → **`O(1)`**
+- `print(arr[i])` → **`O(1)`**
 
 - Inner loop runs **500,000 times**.
 
@@ -221,16 +216,14 @@ for (let i = 0; i < arr.length; i++) {
 
 ### Case 3: Nested Loops — `O(n²)`
 
-```
-//Given an integer array arr with length n
-for (let i = 0; i < arr.length; i++) {
-    for (let j = 0; j < arr.length; j++) {
-        console.log(arr[i] * arr[j]);
-    }
-}
+```python
+# Given an integer array arr with length n
+for i in range(len(arr)):
+    for j in range(len(arr)):
+        print(arr[i] * arr[j])
 ```
 
-- Multiplication and `console.log()` → **`O(1)`**
+- Multiplication and `print()` → **`O(1)`**
 
 - Inner loop runs **`n` times** → each outer iteration costs **`O(n)`**.
 
@@ -246,20 +239,17 @@ for (let i = 0; i < arr.length; i++) {
 
 ### Case 4: Multiple Independent Loops — `O(n + m)`
 
-```
-// Given integer arrays arr with length n and arr2 with length m:
+```python
+# Given integer arrays arr with length n and arr2 with length m
 
-for (let i = 0; i < arr.length; i++) {
-    console.log(arr[i]);
-}
+for i in range(len(arr)):
+    print(arr[i])
 
-for (let i = 0; i < arr.length; i++) {
-    console.log(arr[i]);
-}
+for i in range(len(arr)):
+    print(arr[i])
 
-for (let i = 0; i < arr2.length; i++) {
-    console.log(arr2[i]);
-}
+for i in range(len(arr2)):
+    print(arr2[i])
 ```
 
 - First two `for` loops → **`O(n)`** each.
@@ -278,13 +268,11 @@ for (let i = 0; i < arr2.length; i++) {
 
 ### Case 5: Dependent Nested Loops — `O(n²)`
 
-```
-// Given an integer array arr with length n:
-for (let i = 0; i < arr.length; i++) {
-    for (let j = i; j < arr.length; j++) {
-        console.log(arr[i] + arr[j]);
-    }
-}
+```python
+# Given an integer array arr with length n
+for i in range(len(arr)):
+    for j in range(i, len(arr)):
+        print(arr[i] + arr[j])
 ```
 
 - The inner loop depends on the current iteration of the outer loop.
@@ -327,11 +315,10 @@ for (let i = 0; i < arr.length; i++) {
 
 ### Case 1 : No Extra Data Structure — `O(1)`
 
-```js
-// Given an integer array "arr" with length n
-for (let i = 0; i < arr.length; i++) {
-    console.log(arr[i]);
-}
+```python
+# Given an integer array arr with length n
+for i in range(len(arr)):
+    print(arr[i])
 ```
 
 - The only extra space used is the loop variable `i`.
@@ -341,13 +328,12 @@ for (let i = 0; i < arr.length; i++) {
 ### Case 2 : Extra Array of Size `n` — `O(n)`
 
 ```js
-// Given an integer array "arr" with length n
+# Given an integer array arr with length n
 
-let doubledNums = [];
+doubled_nums = []
 
-for (let i = 0; i < arr.length; i++) {
-    doubledNums.push(arr[i] * 2);
-}
+for i in range(len(arr)):
+    doubled_nums.append(arr[i] * 2)
 ```
 
 - `doubledNums` stores **`n` integers** at the end of the algorithm.
@@ -355,15 +341,14 @@ for (let i = 0; i < arr.length; i++) {
 
 ### Case 3 : Constant Fraction of Input — `O(n)`
 
-```js
-// Given an integer array "arr" with length n
+```python
+# Given an integer array arr with length n
 
-let nums = [];
-let oneHundredth = Math.floor(arr.length / 100);
+nums = []
+one_hundredth = len(arr) // 100
 
-for (let i = 0; i < oneHundredth; i++) {
-    nums.push(arr[i]);
-}
+for i in range(one_hundredth):
+    nums.append(arr[i])
 ```
 
 - `nums` stores the **first 1% of the numbers** in `arr`.
@@ -372,18 +357,14 @@ for (let i = 0; i < oneHundredth; i++) {
 
 ### Case 4 : 2D Array of Size `n × m` — `O(n · m)`
 
-```js
-// Given integer arrays "arr" with length n and "arr2" with length m
+```python
+# Given integer arrays arr with length n and arr2 with length m
 
-let grid = Array.from({ length: arr.length }, () => 
-    new Array(arr2.length)
-);
+grid = [[None] * len(arr2) for _ in range(len(arr))]
 
-for (let i = 0; i < arr.length; i++) {
-    for (let j = 0; j < arr2.length; j++) {
-        grid[i][j] = arr[i] * arr2[j];
-    }
-}
+for i in range(len(arr)):
+    for j in range(len(arr2)):
+        grid[i][j] = arr[i] * arr2[j]
 ```
 
 - `grid` has dimensions **`n × m`**.
