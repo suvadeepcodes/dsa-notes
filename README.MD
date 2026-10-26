@@ -28,6 +28,17 @@
 | Chap 4 \| Sorting       |        |      |
 | Chap 5 \| Pythonic Code |        |      |
 
+## Python oop
+
+| Topic                         | Status | Link |
+| ----------------------------- | ------ | ---- |
+| Chap 1 \| Classes and Objects |        |      |
+| Chap 2 \| Encapsulation       |        |      |
+| Chap 3 \| Class Attributes    |        |      |
+| Chap 4 \| Inheritance         |        |      |
+| Chap 5 \| Polymorphism        |        |      |
+| Chap 6 \| Abstraction         |        |      |
+
 ## Arrays and Strings Patterns
 
 | Topic                               | Status | Link |
