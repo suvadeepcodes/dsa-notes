@@ -2,14 +2,14 @@
 
 ## Python Basics
 
-| Topic                            | Status | Link |
-| -------------------------------- | ------ | ---- |
-| Chap 1 \| Introduction           |        |      |
-| Chap 2 \| Varibles               |        |      |
-| Chap 3 \| Math                   |        |      |
-| Chap 4 \| Functions              |        |      |
-| Chap 5 \| Conditional Statements |        |      |
-| Chap 6 \| Loops                  |        |      |
+| Topic                            | Status | Link                                                         |
+| -------------------------------- | ------ | ------------------------------------------------------------ |
+| Chap 1 \| Introduction           | Done   | [Notes](https://github.com/suvadeepcodes/dsa-notes/tree/main/01-Python-1/Chap%201%20%7C%20Introduction/notes) |
+| Chap 2 \| Varibles               | Done   | [Notes](https://github.com/suvadeepcodes/dsa-notes/tree/main/01-Python-1/Chap%202%20%7C%20Variables/notes) |
+| Chap 3 \| Math                   | Done   | [Notes](https://github.com/suvadeepcodes/dsa-notes/tree/main/01-Python-1/Chap%203%20%7C%20Math/notes) |
+| Chap 4 \| Functions              | Done   | [Notes](https://github.com/suvadeepcodes/dsa-notes/tree/main/01-Python-1/Chap%204%20%7C%20Functions/notes) |
+| Chap 5 \| Conditional Statements | Done   | [Notes](https://github.com/suvadeepcodes/dsa-notes/tree/main/01-Python-1/Chap%205%20%7C%20Conditional%20Statements/notes) |
+| Chap 6 \| Loops                  | Done   | [Notes](https://github.com/suvadeepcodes/dsa-notes/tree/main/01-Python-1/Chap%206%20%7C%20Loops/notes) |
 
 ## Introduction to Big O and Recursion
 

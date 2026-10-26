@@ -42,6 +42,10 @@ while i<5:
 
 - Syntax : `start, stop,step`
 
+  - start ➡️ inclusive
+  - stop ➡️ exclusive
+
+
 **Q**: Explain the following control flow statements 
 
 - break
@@ -55,4 +59,11 @@ while i<5:
 | `break`      | Exits the loop immediately                                   |
 | `continue`   | Skips the remaining code inside the loop for the current iteration and moves to the next iteration |
 | `pass`       | Acts as a placeholder and does nothing. We cannot have empty loops so we use `pass` to avoid errors |
+
+Example ➡️
+
+```python
+def greet():
+    pass
+```
 

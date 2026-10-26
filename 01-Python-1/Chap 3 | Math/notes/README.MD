@@ -8,7 +8,7 @@
 | `-`                   | Substracts the second operand from the first                 |
 | `*`                   | Multiplies 2 operands                                        |
 | `/`                   | Divides the first operand by the second .The result is always a float |
-| `//` (Floor Division) | Divides the first operand by the second and the result is always an integer |
+| `//` (Floor Division) | Divides the first operand by the second and the result is always an integer(moved up) |
 | `%` (Modulas)         | Returns the remainder of the division of the first operand by the second |
 | `**` (Exponentiation) | Raises the first operand to the power of the second operand  |
 
