@@ -29,6 +29,6 @@ Anki Tag ➡️ 03-math
 
 | Boolean Operators | Definition                                               | Example                                                      |
 | ----------------- | -------------------------------------------------------- | ------------------------------------------------------------ |
-| `or`              | returns `True` if at least one of the operands is `True` | ``a,b,c = False,False,True`<br/>print(a or b or c)` <br />#Output : True |
+| `or`              | returns `True` if at least one of the operands is `True` | `a,b,c = False,False,True`<br/>print(a or b or c)` <br />#Output : True |
 | `and`             | returns `True` if all the operands is `True`             | `a,b,c = True,True,True`<br />`print(a and b and c) #Output : True` |
 | `not`             | inverts the value of the operand                         | `a,b = True,False`<br />`print(not a)` # Output: False<br />`print(not b)` # Output : True |
