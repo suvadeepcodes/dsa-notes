@@ -1,5 +1,7 @@
 # Anki Notes ➡️ Chap 6 | Loops
 
+Anki ➡️ 06-loops
+
 **Q**: Print `I Love Python` 5 times using while loop 
 
 **Solution**

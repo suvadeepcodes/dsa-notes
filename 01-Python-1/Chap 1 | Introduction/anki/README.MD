@@ -1,6 +1,8 @@
 # Anki Notes ➡️ Chap 1 | Introduction
 
-**Q**: What is the syntax for printing `Hello World` in Python ? 
+Anki Tag ➡️ 01-introduction
+
+**Q**: print `Hello World`  
 
 **Solution**:
 
@@ -12,7 +14,7 @@ print("Hello , World")
 
 **Solution**:
 
-Comment ➡️ any text after the # character on a line is considered a comment 
+any text after the # character on a line is considered a comment 
 
 ```python
 # This is a comment

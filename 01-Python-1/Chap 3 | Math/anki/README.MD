@@ -1,5 +1,7 @@
 # Anki ➡️ Chap 3 | Math
 
+Anki Tag ➡️ 03-math
+
 **Q**: Arithmatic Operators
 
 | Operation | Result | Definition                                                   |
