@@ -18,3 +18,11 @@
 | Chap 1 \| Introduction to Big O     | Done   |      |
 | Chap 2 \| Introduction to Recursion | Done   |      |
 
+## Python Lists and Strings
+
+| Topic              | Status | Link |
+| ------------------ | ------ | ---- |
+| Chap 1 \| Strings  | Done   |      |
+| Chap 2 \| Lists    | Done   |      |
+| Chap 3 \| 2D Lists | Done   |      |
+
