@@ -99,7 +99,7 @@
 - `index()` ➡️ Returns the index of the first occurrence of a specified element in the list.
 
   - If the element is not in the list, we will get an `ValueError`.
-  - Time complexity: O(n), where nn is the length of the list.
+  - Time complexity: O(n), where n is the length of the list.
 
 - `remove()`: Removes the first occurrence of a specified element from the list.
 
@@ -155,7 +155,7 @@
   my_list = [0] * 5
   ```
 
-- Time complexity: O(n) where nn is the size of the resulting list.'
+- Time complexity: O(n) where n is the size of the resulting list.
 
 ## List Clone
 

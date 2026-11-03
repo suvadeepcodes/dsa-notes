@@ -100,22 +100,6 @@ for char in my_string:
 
 - Syntax : `start, stop,end`
 
-## Reversing a string
-
-- By not specifying the starting index or the ending index and setting the step to -1 the string will be reversed
-
-  ```
-  my_string = "Hello"
-  print(my_string[::-1]) # Output : olleH
-  ```
-
-- The value before the first colon is the starting index , the value after the first colon is the ending index and the value after the colon is the step .If the step is negative the string will be reversed
-
-  ```
-  starting index ➡️ inclusive 
-  ending index ➡️ exclusive 
-  ```
-
 ## Strings are Immutable
 
 - Strings are immutable in Python which means they cannot be changed after they are created
