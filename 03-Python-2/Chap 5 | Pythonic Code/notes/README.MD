@@ -52,6 +52,8 @@ x2, y2 = point2 # x2 = 2, y2 = 4
 
 - The `enumerate()` function returns a tuple of the index and the element at that index. We can unpack this tuple into two variables in the for loop.
 
+- Time Complexity of iteration with enumerate ➡️ O(n)
+
 ## Zip
 
 - Python provides an easy way to iterate over multiple lists at the same time using the `zip()` function. The `zip()` function takes multiple lists as arguments and returns an iterator of tuples. Each tuple contains an element from each list.
